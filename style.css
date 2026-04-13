@@ -1,0 +1,73 @@
+/* BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --gold: #C9A063; --dark: #1a1a1a; }
+body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.gold-text { color: var(--gold); }
+.section-padding { padding: 80px 0; text-align: center; }
+
+/* HEADER & MENU */
+header { background: #fff; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #f0f0f0; }
+nav { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+.logo { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; }
+
+.nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--dark); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.btn-contact { border: 1px solid var(--gold); padding: 8px 15px; color: var(--gold) !important; }
+
+.menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); }
+
+/* HERO */
+.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1600&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin: 20px 0; }
+.btn-gold { background: var(--gold); color: #fff; padding: 15px 30px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; display: inline-block; }
+
+/* CARD CURSO */
+.course-card { display: flex; flex-wrap: wrap; background: #fff; border: 1px solid #eee; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.course-img { flex: 1; min-width: 300px; position: relative; }
+.course-img img { width: 100%; height: 100%; object-fit: cover; }
+.badge { position: absolute; top: 15px; left: 15px; background: var(--gold); color: #fff; padding: 5px 10px; font-size: 0.7rem; font-weight: 700; }
+.course-info { flex: 1; min-width: 300px; padding: 40px; text-align: left; }
+.form-inscricao { display: flex; gap: 10px; margin-top: 20px; }
+.form-inscricao input { flex: 1; padding: 12px; border: 1px solid #ddd; }
+
+/* FOOTER */
+.footer { background: #111; color: #fff; padding: 40px 0; text-align: center; }
+.insta-footer { font-size: 2rem; margin-top: 15px; display: inline-block; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li { margin: 10px 0; text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    .form-inscricao { flex-direction: column; }
+}
+
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 2000; text-decoration: none; }
+
+
+
+
+
+
+
+
+
+
